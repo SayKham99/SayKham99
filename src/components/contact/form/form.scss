@@ -1,0 +1,75 @@
+@import '../../../assets/variables/color';
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    @media (max-width: 850px) {
+      flex-wrap: wrap;
+    }
+
+
+    & * {
+      width: 50%;
+      background-color: transparent;
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 12px 24px;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+
+      @media (max-width: 850px) {
+        width: 100%;
+      }
+
+      &:focus {
+        border: 1px solid $main;
+      }
+
+      &::placeholder {
+        color: $grey;
+      }
+    }
+  }
+
+  &__message {
+    width: 100%;
+    max-height: 180px;
+    background-color: transparent;
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 12px 24px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+
+    &:focus {
+      border: 1px solid $main;
+    }
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &__btn {
+    padding: 8px 16px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    background-color: $darkblack;
+    font-size: 18px;
+    font-weight: 600;
+    color: $main;
+  }
+}

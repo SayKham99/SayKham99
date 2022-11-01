@@ -1,0 +1,24 @@
+@import "../../assets/variables/color";
+
+.portfolio {
+  &__projects {
+    &-items {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px 10px;
+      &--item{
+        /*max-width: calc(33% - 5px);*/
+        max-width: calc(50% - 10px);
+        @media (max-width: 940px) {
+          max-width: calc(50% - 10px);
+        }
+        @media (max-width: 540px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

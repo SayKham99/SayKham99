@@ -1,0 +1,60 @@
+@import "../../assets/variables/color";
+
+.resume {
+  &__title {
+  }
+
+  &__education {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    padding-left: 20px;
+    &-item {
+    margin-bottom: 30px;
+    position: relative;
+      padding-left: 30px;
+
+      &:last-child:after{
+        top: -125%;
+      }
+      &::after{
+        z-index: 1;
+        content: "";
+        top: -30px;
+        position: absolute;
+        left: 2px;
+        width: 1px;
+        height: 130%;
+        background: $border;
+      }
+      &::before{
+        z-index: 2;
+        position: absolute;
+        top: 5px;
+        left: -2px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $main;
+      }
+      &--title {
+        color: white;
+      }
+
+      &--date {
+        color: $main;
+      }
+
+      &--descr {
+      }
+    }
+  }
+}

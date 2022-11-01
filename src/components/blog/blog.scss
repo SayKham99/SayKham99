@@ -1,0 +1,22 @@
+@import "../../assets/variables/color";
+
+.blog {
+  &__projects {
+    margin-bottom: 15px;
+    &-items {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px 10px;
+
+      &--item {
+        max-width: calc(50% - 10px);
+        @media (max-width: 540px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
