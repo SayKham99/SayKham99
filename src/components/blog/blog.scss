@@ -1,8 +1,11 @@
 @import "../../assets/variables/color";
 
 .blog {
+  padding: 25px 35px;
+
   &__projects {
     margin-bottom: 15px;
+
     &-items {
       width: 100%;
       display: flex;

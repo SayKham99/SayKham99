@@ -2,12 +2,19 @@
 
 .testimonial {
   margin-bottom: 30px;
+  padding: 25px 0;
+  overflow-x: hidden;
+
+  &__title {
+    padding-left: 35px;
+  }
 
   &__cards {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 30px;
+    gap: 32px;
     padding: 35px 0;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -34,14 +41,21 @@
     }
 
     &::-webkit-scrollbar-button {
-      width: 100px;
+      width: 10%;
     }
 
 
     &-card {
-      scroll-snap-align: end;
+      &:first-child {
+        margin-left: 35px;
+      }
+
+      &:last-child {
+        margin-right: 35px;
+      }
+
       @media (max-width: 940px) {
-        min-width: 100%;
+        min-width: 92.5%;
       }
     }
   }

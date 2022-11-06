@@ -4,16 +4,20 @@
   width: 100%;
   transition: all .3s ease-in-out;
 
-  &__text {
-    margin-bottom: 30px;
-  }
+  &__wrapper {
+    padding: 25px 35px 0px 35px;
 
-  &__card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    &-text {
+      margin-bottom: 30px;
+    }
+
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
   }
 }

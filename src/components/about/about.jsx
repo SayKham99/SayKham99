@@ -13,48 +13,40 @@ const doing = [
     {
         id: 1,
         icon: <Design/>,
-        title: 'Web Design',
-        descr: 'The most modern and high-quality design made at a professional level.'
+        title: 'Web Dizayn',
+        descr: 'Professional darajada yaratilgan eng zamonaviy va sifatli dizayn.'
     },
     {
         id: 2,
         icon: <Dev/>,
-        title: 'Web Development',
-        descr: 'High-quality development of sites at the professional level.'
+        title: 'Web Dasturlash',
+        descr: 'Professional darajada saytlarni yuqori sifatli ishlab chiqish.'
     },
-    {
-        id: 3,
-        icon: <App/>,
-        title: 'Mobile Apps',
-        descr: 'Professional development of applications for iOS and Android.'
-    },
-    {
-        id: 4,
-        icon: <Photo/>,
-        title: 'Photography',
-        descr: 'I make high-quality photos of any category at a professional level.'
-    },
-
 ]
 
 function About() {
     return (<main className='about'>
-        <h1>About Me</h1>
-        <hr className='about__divider'/>
-        <p className='about__text f15'>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print
-            media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
-            <br/> <br/>
-            My job is to build your website so that it is functional and user-friendly but at the same time
-            attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy
-            to use. My aim is to bring across your message and identity in the most creative way. I created web
-            design for many famous brand companies.
-        </p>
-        <h2>What I'm doing</h2>
-        <div className='about__card'>
-            {doing.map(type => (
-                <Card data={type}/>
-            ))}
+        <div className='about__wrapper'>
+            <h1>Men</h1>
+            <hr className='about__wrapper-divider'/>
+            <p className='about__wrapper-text f15'>
+                Mening ismim Hamidullo. Men frontend dasturchisiman.
+                Men hozir yosh, iqtidorli va o'sib borayotgan Frontend Dasturchiman.
+                <br/>
+                <br/>
+                Mening tarjimai holimga qarasangiz, ehtimol
+                Siz doimiy izlanish va o'rganishni ko'rasiz.
+                Yoshligimdan hamma narsani mukammal qilishga harakat qildim va bunga ko'p vaqt sarfladim.
+                Men barcha bilimlarni mukammal va puxta egallashga harakat qildim,
+                Shu kungacha bilimimni yo'qotmadim,
+                o'rganish va o'rganishni davom ettirish uchun motivatsiya.
+            </p>
+            <h2>Nima qila olaman?</h2>
+            <div className='about__wrapper-card'>
+                {doing.map(type => (
+                    <Card data={type}/>
+                ))}
+            </div>
         </div>
         <Testimonial/>
         <Partners/>

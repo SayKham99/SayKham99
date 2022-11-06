@@ -41,7 +41,7 @@ function Testimonial() {
     return (
         <div className='testimonial'>
 
-            <h2>Testimonials</h2>
+            <h2 className='testimonial__title'>Fikr-Mulohazalar</h2>
             <ul className='testimonial__cards'>
                 {testimonial.map(person => (
                     <li key={person.id} className='testimonial__cards-card'>

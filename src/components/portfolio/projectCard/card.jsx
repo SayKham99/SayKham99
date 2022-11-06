@@ -3,16 +3,18 @@ import {ReactComponent as Eye} from "../../../assets/icons/eye-outline.svg";
 import Icon from "../../usable/icon/icon";
 
 function Card({data}) {
-    const {id, img, name, descr, urls} = data
-    console.log(img)
+    const {id, img, name, descr, type, url} = data
+    console.log(url)
     return (
-        <div className='pCard'>
+        <div key={id} className='pCard'>
             <div className='pCard__image'>
-                <Icon icon={<Eye/>}/>
+                <a href={url} target="_blank">
+                    <Icon icon={<Eye/>}/>
+                </a>
                 <img src={img} alt="" className='pCard__image-img'/>
             </div>
             <p className='pCard__title'>{name}</p>
-            <p className='pCard__descr f15'>{descr}</p>
+            <p className='pCard__descr f15'>{type}</p>
         </div>
     );
 }

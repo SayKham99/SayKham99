@@ -9,7 +9,7 @@ function Nav() {
                 <NavLink to={'/'}>About</NavLink>
                 <NavLink to={'/resume'}>Resume</NavLink>
                 <NavLink to={'/portfolio'}>Portfolio</NavLink>
-                <NavLink to={'/blog'}>Blog</NavLink>
+                {/*<NavLink to={'/blog'}>Blog</NavLink>*/}
                 <NavLink to={'/contact'}>Contact</NavLink>
             </nav>
             <main className='main__content'>

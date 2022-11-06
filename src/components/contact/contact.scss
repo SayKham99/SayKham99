@@ -1,7 +1,9 @@
 @import "../../assets/variables/color";
 
 .contact {
-  min-width: 830px;
+  min-width: 900px;
+  padding: 25px 35px 35px 35px;
+
   @media (max-width: 910px) {
     padding-right: 0;
     min-width: 0;

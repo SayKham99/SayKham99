@@ -1,6 +1,13 @@
 @import '../../../assets/variables/color';
 
 .partners {
+  padding: 25px 0 35px 0;
+  overflow-x: hidden;
+
+  &__title {
+    padding-left: 35px;
+  }
+
   &__items {
     display: flex;
     justify-content: flex-start;
@@ -10,7 +17,6 @@
     padding: 35px 15px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
 
     &::-webkit-scrollbar-track {
@@ -28,6 +34,19 @@
       width: 40%;
       border-radius: 10px;
       background-color: $main
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 10.5%;
+    }
+
+    &-item{
+      &:first-child{
+        margin-left: 35px;
+      }
+      &:last-child{
+        margin-right: 35px;
+      }
     }
 
     &-item * {

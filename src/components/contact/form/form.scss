@@ -73,3 +73,7 @@
     color: $main;
   }
 }
+.disable{
+  cursor: not-allowed;
+  opacity: .5;
+}

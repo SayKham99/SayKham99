@@ -11,6 +11,7 @@ import {ReactComponent as In} from "../../../assets/icons/in.svg";
 import {ReactComponent as Tg} from "../../../assets/icons/tg.svg";
 import {ReactComponent as Github} from "../../../assets/icons/github.svg";
 import Icon from "../icon/icon";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const contact = [
     {
@@ -94,26 +95,33 @@ const sidebarVar = {
 }
 
 function Sidebar() {
+    const [height, width] = useWindowSize()
     const [isOpen, toggleOpen] = useCycle(false, true)
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        if (width > 1285) {
+            setOpen(false)
+        } else {
+            setOpen(true)
+        }
+    }, [width])
 
     return (
-        <aside className='sidebar'>
+        <aside className={`sidebar ${!open ? 'active' : ''}`}>
             <div className='sidebar__more-btn'>
-                <p className='f15' onClick={() => toggleOpen()}>Show More</p>
+                <p className='f15' onClick={() => setOpen(!open)}>{width > 600 ? 'Show More': 'v'}</p>
             </div>
             <div className='sidebar__header'>
                 <div className='sidebar__header-image'>
                     <img src={avatar} alt="Avatar" className='sidebar__header-image--avatar'/>
                 </div>
                 <div className='sidebar__header-text'>
-                    <h1 className='title'>Saydulaev Khamidullo</h1>
-                    <div><p>Web Developer</p></div>
+                    <h1 className='title'>Saydullaev Khamidullo</h1>
+                    <div><p>Front-end Developer</p></div>
                 </div>
             </div>
-            <motion.div
-                initial={"state"}
-                animate={!isOpen ? "open" : "close"}
-                variants={sidebarVar}
+            <div
                 className='sidebar__body'
             >
                 {contact.map(({id, url, urlText, icon, title}) => (<div key={id} className='sidebar__body-item'>
@@ -125,15 +133,12 @@ function Sidebar() {
                         <a href={url} className='text__url' target='_blank'>{urlText}</a>
                     </div>
                 </div>))}
-            </motion.div>
-            <motion.div
-                initial={"state"}
-                animate={!isOpen ? "open" : "close"}
-                variants={sidebarVar}
+            </div>
+            <div
                 className='sidebar__footer'
             >
                 {social.map(({id, icon, url}) => (<a key={id} href={url} target='_blank'>{icon}</a>))}
-            </motion.div>
+            </div>
         </aside>
     );
 }

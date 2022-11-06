@@ -1,8 +1,7 @@
 @import "../../assets/variables/color";
 
 .resume {
-  &__title {
-  }
+  padding: 25px 35px 35px 35px;
 
   &__education {
     display: flex;
@@ -31,7 +30,7 @@
         position: absolute;
         left: 2px;
         width: 1px;
-        height: 130%;
+        height: 140%;
         background: $border;
       }
       &::before{
@@ -44,6 +43,7 @@
         height: 10px;
         border-radius: 5px;
         background-color: $main;
+        box-shadow: 0 0 0 4px $border;
       }
       &--title {
         color: white;

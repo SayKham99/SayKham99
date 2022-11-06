@@ -38,7 +38,7 @@ const partner = [
 function Partners() {
     return (
         <main className='partners'>
-            <h2 className='partners__title'>Partners</h2>
+            <h2 className='partners__title'>Hamkorlar</h2>
             <ul className='partners__items'>
                 {partner.map(({id, icon}) => (
                     <li key={id} className='partners__items-item'>
