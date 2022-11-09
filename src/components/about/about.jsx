@@ -6,8 +6,6 @@ import {ReactComponent as Design} from "../../assets/icons/icon-design.svg";
 import {ReactComponent as Dev} from "../../assets/icons/icon-dev.svg";
 import {ReactComponent as Photo} from "../../assets/icons/icon-photo.svg";
 import Card from "./aboutCard/card";
-import Testimonial from "./testimonials/testimonial";
-import Partners from "./partners/partners";
 
 const doing = [
     {
@@ -18,6 +16,18 @@ const doing = [
     },
     {
         id: 2,
+        icon: <Dev/>,
+        title: 'Web Dasturlash',
+        descr: 'Professional darajada saytlarni yuqori sifatli ishlab chiqish.'
+    },
+    {
+        id: 3,
+        icon: <Dev/>,
+        title: 'Back-end',
+        descr: 'Back-end integratsiya RESTful-API/REST-API'
+    },
+    {
+        id: 4,
         icon: <Dev/>,
         title: 'Web Dasturlash',
         descr: 'Professional darajada saytlarni yuqori sifatli ishlab chiqish.'
@@ -48,8 +58,8 @@ function About() {
                 ))}
             </div>
         </div>
-        <Testimonial/>
-        <Partners/>
+        {/*<Testimonial/>
+        <Partners/>*/}
     </main>);
 }
 

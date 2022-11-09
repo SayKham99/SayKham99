@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './sidebar.scss'
-import Container from "../../../utils/container/Container";
-import {motion, useCycle} from "framer-motion";
 import avatar from '../../../assets/memojis/me.png'
 import {ReactComponent as Mail} from "../../../assets/icons/mail-outline.svg";
 import {ReactComponent as Phone} from "../../../assets/icons/phone-portrait-outline.svg";
@@ -10,6 +8,7 @@ import {ReactComponent as Geo} from "../../../assets/icons/location-outline.svg"
 import {ReactComponent as In} from "../../../assets/icons/in.svg";
 import {ReactComponent as Tg} from "../../../assets/icons/tg.svg";
 import {ReactComponent as Github} from "../../../assets/icons/github.svg";
+import {ReactComponent as Down} from "../../../assets/icons/chevron-down.svg";
 import Icon from "../icon/icon";
 import useWindowSize from "../../../hooks/useWindowSize";
 
@@ -47,7 +46,7 @@ const contact = [
 const social = [
     {
         id: 1,
-        icon: <Github/>,
+        icon: <Github fill={"red"}/>,
         url: 'https://github.com/SayKham99/'
     },
     {
@@ -62,41 +61,8 @@ const social = [
     },
 ]
 
-const sidebarVar = {
-    state: {
-        opacity: 0,
-        trasition: {
-            delay: 0.5,
-            x: {duration: 1},
-            default: {ease: "linear"}
-        }
-    },
-    open: {
-        y: 0,
-        display: 'flex',
-        opacity: 1,
-        trasition: {
-            delay: 0.5,
-            x: {duration: 1},
-            default: {ease: "linear"}
-        }
-    },
-    close: {
-        zIndex: -3,
-        y: -1000,
-        display: 'none',
-        opacity: 0,
-        trasition: {
-            delay: 0.5,
-            x: {duration: 1},
-            default: {ease: "linear"}
-        }
-    }
-}
-
 function Sidebar() {
     const [height, width] = useWindowSize()
-    const [isOpen, toggleOpen] = useCycle(false, true)
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
@@ -110,7 +76,7 @@ function Sidebar() {
     return (
         <aside className={`sidebar ${!open ? 'active' : ''}`}>
             <div className='sidebar__more-btn'>
-                <p className='f15' onClick={() => setOpen(!open)}>{width > 600 ? 'Show More': 'v'}</p>
+                <p className='f15' onClick={() => setOpen(!open)}>{width > 600 ? 'Show More': <Down/>}</p>
             </div>
             <div className='sidebar__header'>
                 <div className='sidebar__header-image'>

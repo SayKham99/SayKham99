@@ -3,6 +3,10 @@
 .resume {
   padding: 25px 35px 35px 35px;
 
+  @media (max-width: 425px) {
+    padding: 15px 25px 20px 25px;
+  }
+
   &__education {
     display: flex;
     justify-content: flex-start;

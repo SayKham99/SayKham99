@@ -44,6 +44,9 @@
     border-top: none;
     border-right: none;
     border-radius: 0 30px;
+    @media (max-width: 450px) {
+      padding: 5px 15px;
+    }
 
     & * {
       line-height: 12px;
@@ -96,6 +99,7 @@
         border-radius: 6px;
 
         p {
+          color: white;
           font-size: 12px;
         }
       }

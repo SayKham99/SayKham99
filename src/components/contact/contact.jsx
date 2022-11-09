@@ -5,7 +5,7 @@ import Form from "./form/form";
 function Contact() {
     return (
         <div className='contact'>
-            <h1>Contact</h1>
+            <h1>Aloqa</h1>
             <hr/>
             <div className='contact__map'>
                 <iframe

@@ -33,8 +33,9 @@
     border-radius: 30px;
     min-height: 800px;
     margin-bottom: 30px;
-    @media (max-width: 425px) {
-      padding: 20px;
-    }
   }
+}
+
+.active {
+  color: $main;
 }
