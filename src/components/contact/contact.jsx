@@ -1,11 +1,11 @@
 import './contact.scss'
-import Testimonial from "../about/testimonials/testimonial";
 import Form from "./form/form";
+import {Text} from "../../utils/context/lang";
 
 function Contact() {
     return (
         <div className='contact'>
-            <h1>Aloqa</h1>
+            <h1><Text tid="contact"/></h1>
             <hr/>
             <div className='contact__map'>
                 <iframe

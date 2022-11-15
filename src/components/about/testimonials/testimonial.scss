@@ -10,11 +10,12 @@
   }
 
   &__cards {
+    margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 32px;
+    gap: 28px;
     padding: 35px 0;
     overflow-x: auto;
     scroll-behavior: smooth;

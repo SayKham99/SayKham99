@@ -1,5 +1,6 @@
 import React from 'react';
 import './card.scss'
+import {Text} from "../../../utils/context/lang";
 
 function Card({data}) {
     const {id, icon, title, descr} = data
@@ -9,8 +10,8 @@ function Card({data}) {
                 {icon}
             </div>
             <div className='card__text'>
-                <p className='card__text-title'>{title}</p>
-                <p className='card__text-descr f15'>{descr}</p>
+                <p className='card__text-title'><Text tid={title}/></p>
+                <p className='card__text-descr f15'><Text tid={descr}/></p>
             </div>
         </div>
     );

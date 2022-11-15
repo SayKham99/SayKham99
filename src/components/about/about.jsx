@@ -6,58 +6,45 @@ import {ReactComponent as Design} from "../../assets/icons/icon-design.svg";
 import {ReactComponent as Dev} from "../../assets/icons/icon-dev.svg";
 import {ReactComponent as Photo} from "../../assets/icons/icon-photo.svg";
 import Card from "./aboutCard/card";
+import {Text} from "../../utils/context/lang";
+import Testimonial from "./testimonials/testimonial";
+import Partners from "./partners/partners";
+import Resume from "../resume/resume";
 
 const doing = [
     {
         id: 1,
         icon: <Design/>,
-        title: 'Web Dizayn',
-        descr: 'Professional darajada yaratilgan eng zamonaviy va sifatli dizayn.'
+        title: "canido1title",
+        descr: "canido1descr"
     },
     {
         id: 2,
         icon: <Dev/>,
-        title: 'Web Dasturlash',
-        descr: 'Professional darajada saytlarni yuqori sifatli ishlab chiqish.'
-    },
-    {
-        id: 3,
-        icon: <Dev/>,
-        title: 'Back-end',
-        descr: 'Back-end integratsiya RESTful-API/REST-API'
-    },
-    {
-        id: 4,
-        icon: <Dev/>,
-        title: 'Web Dasturlash',
-        descr: 'Professional darajada saytlarni yuqori sifatli ishlab chiqish.'
-    },
+        title: "canido2title",
+        descr: "canido2descr"
+    }
 ]
 
 function About() {
     return (<main className='about'>
         <div className='about__wrapper'>
-            <h1>Men</h1>
+            <h1><Text tid="aboutme"/></h1>
             <hr className='about__wrapper-divider'/>
             <p className='about__wrapper-text f15'>
-                Mening ismim Hamidullo. Men frontend dasturchisiman.
-                Men hozir yosh, iqtidorli va o'sib borayotgan Frontend Dasturchiman.
+                <Text tid="abouttitle"/>
                 <br/>
                 <br/>
-                Mening tarjimai holimga qarasangiz, ehtimol
-                Siz doimiy izlanish va o'rganishni ko'rasiz.
-                Yoshligimdan hamma narsani mukammal qilishga harakat qildim va bunga ko'p vaqt sarfladim.
-                Men barcha bilimlarni mukammal va puxta egallashga harakat qildim,
-                Shu kungacha bilimimni yo'qotmadim,
-                o'rganish va o'rganishni davom ettirish uchun motivatsiya.
+                <Text tid="aboutdescr"/>
             </p>
-            <h2>Nima qila olaman?</h2>
+            {/*<h2><Text tid="whatcanido"/></h2>
             <div className='about__wrapper-card'>
                 {doing.map(type => (
                     <Card data={type}/>
                 ))}
-            </div>
+            </div>*/}
         </div>
+        <Resume/>
         {/*<Testimonial/>
         <Partners/>*/}
     </main>);

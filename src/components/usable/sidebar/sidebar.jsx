@@ -11,35 +11,36 @@ import {ReactComponent as Github} from "../../../assets/icons/github.svg";
 import {ReactComponent as Down} from "../../../assets/icons/chevron-down.svg";
 import Icon from "../icon/icon";
 import useWindowSize from "../../../hooks/useWindowSize";
+import {Text} from "../../../utils/context/lang";
 
 const contact = [
     {
         id: 1,
         icon: <Mail/>,
         url: 'mailto:x5292623@icloud.com',
-        urlText: 'x5292623@icloud.com',
+        urlText: 'text',
         title: 'email'
     },
     {
         id: 2,
         icon: <Phone/>,
         url: 'tel:998907636669',
-        urlText: '+998(90) 763-66-69',
+        urlText: 'text',
         title: 'phone'
     },
     {
         id: 3,
         icon: <Calendar/>,
         url: 'none',
-        urlText: 'November 18,1999',
+        urlText: 'text',
         title: 'birthday'
     },
     {
         id: 4,
         icon: <Geo/>,
         url: 'https://yandex.uz/maps/-/CCU6EJdp~A',
-        urlText: 'Andijan, Andijan, Uzbekistan',
-        title: 'locaiton'
+        urlText: 'text',
+        title: 'location'
     },
 ]
 
@@ -76,15 +77,15 @@ function Sidebar() {
     return (
         <aside className={`sidebar ${!open ? 'active' : ''}`}>
             <div className='sidebar__more-btn'>
-                <p className='f15' onClick={() => setOpen(!open)}>{width > 600 ? 'Show More': <Down/>}</p>
+                <p className='f15' onClick={() => setOpen(!open)}>{width > 600 ? <Text tid="morebtn"/> : <Down/>}</p>
             </div>
             <div className='sidebar__header'>
                 <div className='sidebar__header-image'>
                     <img src={avatar} alt="Avatar" className='sidebar__header-image--avatar'/>
                 </div>
                 <div className='sidebar__header-text'>
-                    <h1 className='title'>Saydullaev Khamidullo</h1>
-                    <div><p>Front-end Developer</p></div>
+                    <h1 className='title'><Text tid="name"/></h1>
+                    <div><p><Text tid="job"/></p></div>
                 </div>
             </div>
             <div
@@ -95,8 +96,8 @@ function Sidebar() {
                         <Icon icon={icon}/>
                     </div>
                     <div className='sidebar__body-item--text text'>
-                        <p className='text__title f15'>{title}</p>
-                        <a href={url} className='text__url' target='_blank'>{urlText}</a>
+                        <p className='text__title f15'><Text tid={`${title}`}/></p>
+                        <a href={url} className='text__url' target='_blank'><Text tid={`${title}${urlText}`}/></a>
                     </div>
                 </div>))}
             </div>

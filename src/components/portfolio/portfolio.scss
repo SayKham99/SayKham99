@@ -3,7 +3,7 @@
 .portfolio {
   padding: 25px 35px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 625px) {
     padding: 15px 25px;
   }
 
@@ -17,12 +17,11 @@
       gap: 15px 10px;
 
       &--item {
-        /*max-width: calc(33% - 5px);*/
         max-width: calc(50% - 10px);
         @media (max-width: 940px) {
           max-width: calc(50% - 10px);
         }
-        @media (max-width: 540px) {
+        @media (max-width: 640px) {
           max-width: 100%;
         }
       }

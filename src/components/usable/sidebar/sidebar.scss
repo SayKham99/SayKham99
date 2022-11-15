@@ -3,6 +3,7 @@
 .sidebar {
   position: relative;
   max-width: 900px;
+  min-width: calc(375px - 40px);
   width: 100%;
   border-radius: 30px;
   background-color: $darkblack;
@@ -44,6 +45,7 @@
     border-top: none;
     border-right: none;
     border-radius: 0 30px;
+    text-transform: capitalize;
     @media (max-width: 450px) {
       padding: 5px 15px;
     }
@@ -87,7 +89,7 @@
         font-weight: 600;
         color: white;
         margin-bottom: 30px;
-        @media (max-width: 425px) {
+        @media (max-width: 625px) {
           margin-bottom: 15px;
         }
       }

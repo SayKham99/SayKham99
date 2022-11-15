@@ -1,4 +1,5 @@
 import './skills.scss'
+import {Text} from "../../../utils/context/lang";
 
 const skills = [
     {
@@ -29,7 +30,7 @@ const skills = [
     {
         id: 6,
         name: "ES6",
-        progress: '70%'
+        progress: '50%'
     },
     {
         id: 7,
@@ -56,7 +57,7 @@ const skills = [
 
 function Skills() {
     return (<div className='skills'>
-        <h2 className='skills__title'>Ko'nikmalar</h2>
+        <h2 className='skills__title'><Text tid="skills"/></h2>
         <div className='skills__items'>
             {skills.map(({id, name, progress}) => (
                 <div key={id} className='skills__items-item'>
