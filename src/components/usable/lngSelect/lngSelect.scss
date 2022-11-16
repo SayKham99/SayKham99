@@ -1,14 +1,5 @@
 @import '../../../assets/variables/color';
 
-svg {
-	cursor: pointer;
-	stroke: white;
-
-	&:hover {
-		opacity: 0.5;
-	}
-}
-
 .lng {
 	position: relative;
 	width: 25px;
@@ -23,5 +14,14 @@ svg {
 	select {
 		opacity: 0;
 		z-index: +1;
+	}
+
+	svg {
+		cursor: pointer;
+		stroke: white;
+
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 }
