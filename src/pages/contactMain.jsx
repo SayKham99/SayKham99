@@ -1,10 +1,8 @@
-import React from 'react';
-import Contact from "../components/contact/contact";
+import React from 'react'
+import Contact from '../components/contact/contact'
 
 function ContactMain() {
-    return (
-        <Contact/>
-    );
+	return <Contact />
 }
 
-export default ContactMain;
+export default ContactMain

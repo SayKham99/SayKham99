@@ -1,12 +1,8 @@
-import React from 'react';
-import Resume from "../components/resume/resume";
+import React from 'react'
+import Resume from '../components/resume/resume'
 
 function ResumeMain() {
-    return (
-        <>
-            <Resume/>
-        </>
-    );
+	return <Resume />
 }
 
-export default ResumeMain;
+export default ResumeMain

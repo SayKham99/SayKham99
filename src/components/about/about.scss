@@ -1,27 +1,27 @@
-@import "../../assets/variables/color";
+@import '../../assets/variables/color';
 
 .about {
-  width: 100%;
-  transition: all .3s ease-in-out;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
 
-  &__wrapper {
-    padding: 25px 35px 0 35px;
+	&__wrapper {
+		padding: 25px 35px 0 35px;
 
-    @media (max-width: 625px) {
-      padding: 15px 15px 0 15px;
-    }
+		@media (max-width: 625px) {
+			padding: 15px 15px 0 15px;
+		}
 
-    &-text {
-      margin-bottom: 30px;
-    }
+		&-text {
+			margin-bottom: 30px;
+		}
 
-    &-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      row-gap: 30px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-  }
+		&-card {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			row-gap: 30px;
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+		}
+	}
 }

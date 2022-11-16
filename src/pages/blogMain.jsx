@@ -1,10 +1,8 @@
-import React from 'react';
-import Blog from "../components/blog/blog";
+import React from 'react'
+import Blog from '../components/blog/blog'
 
 function BlogMain() {
-    return (
-        <Blog/>
-    );
+	return <Blog />
 }
 
-export default BlogMain;
+export default BlogMain
