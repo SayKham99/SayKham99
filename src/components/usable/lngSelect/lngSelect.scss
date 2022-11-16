@@ -1,1 +1,27 @@
 @import '../../../assets/variables/color';
+
+svg {
+	cursor: pointer;
+	stroke: white;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.lng {
+	position: relative;
+	width: 25px;
+	height: 25px;
+
+	& > * {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	select {
+		opacity: 0;
+		z-index: +1;
+	}
+}
