@@ -28,7 +28,7 @@
 	&__content {
 		border: 1px solid $border;
 		max-width: 900px;
-		width: calc(100vw - 40px);
+		width: 100%;
 		min-width: calc(375px - 40px);
 		background-color: $darkblack;
 		border-radius: 30px;

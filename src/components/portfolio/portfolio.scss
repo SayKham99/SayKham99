@@ -1,7 +1,12 @@
 @import '../../assets/variables/color';
 
 .portfolio {
+	min-width: 900px;
 	padding: 25px 35px;
+
+	@media (max-width: 910px) {
+		min-width: 0;
+	}
 
 	@media (max-width: 625px) {
 		padding: 15px 25px;

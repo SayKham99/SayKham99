@@ -119,7 +119,7 @@ function Sidebar() {
 			</div>
 			<div className='sidebar__footer'>
 				{social.map(({ id, icon, url }) => (
-					<a key={id} href={url} target='_blank'>
+					<a key={id} href={url} target='_blank' rel='noreferrer'>
 						{icon}
 					</a>
 				))}

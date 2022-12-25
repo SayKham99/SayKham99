@@ -4,6 +4,7 @@ import './index.scss'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { LanguageProvider } from './utils/context/lang'
+import { inject } from '@vercel/analytics'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -13,3 +14,5 @@ root.render(
 		</BrowserRouter>
 	</LanguageProvider>
 )
+
+inject()
