@@ -9,9 +9,18 @@
 
 	&__content {
 		display: flex;
+
 		&-item {
 			width: 50%;
 		}
+
+		@media (max-width: 625px) {
+			flex-direction: column;
+			&-item {
+				width: 100%;
+			}
+		}
+
 	}
 
 	&__education {

@@ -3,8 +3,8 @@ import { ReactComponent as Book } from '../../assets/icons/books.svg'
 import { ReactComponent as Books } from '../../assets/icons/book-open.svg'
 import Icon from '../usable/icon/icon'
 import './resume.scss'
-import Skills from './skills/skills'
 import { Text } from '../../utils/context/lang'
+import Skills from './skills/skills'
 
 const education = [
 	{

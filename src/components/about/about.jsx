@@ -1,8 +1,7 @@
 import React from 'react'
 import './about.scss'
-
-import { Text } from '../../utils/context/lang'
 import Resume from '../resume/resume'
+import { Text } from '../../utils/context/lang'
 
 function About() {
 	return (
